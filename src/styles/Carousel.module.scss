@@ -1,3 +1,5 @@
+$small: 400px;
+
 .slider {
   display: flex;
   align-items: center;
@@ -33,5 +35,9 @@
     width: 90%;
     height: 90%;
     object-fit: contain;
+  }
+
+  @media screen and (min-width: $small) {
+    height: 700px;
   }
 }
