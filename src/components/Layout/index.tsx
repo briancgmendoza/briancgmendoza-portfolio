@@ -1,12 +1,13 @@
-import SinglePage from "../../pages/SinglePage";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "../NavBar";
+import Carousel from "../Carousel";
+
 import styles from "../../styles/Layout.module.scss";
 
 const Layout = () => {
   return (
     <section className={styles.layoutContainer}>
       <NavBar />
-      <SinglePage />
+      <Carousel />
     </section>
   );
 };
