@@ -7,17 +7,9 @@ const NavBar = () => {
     <section className={styles.navbar}>
       <div className={styles.navLinks}>
         <ul className={styles.navLinksContainer}>
-          <li>
-            <a href="#about">About</a>
-          </li>
-
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-
-          <li>
-            <a href="#email">Email</a>
-          </li>
+          <li>About</li>
+          <li>Projects</li>
+          <li>Message Me</li>
         </ul>
       </div>
 
@@ -32,17 +24,9 @@ const NavBar = () => {
         {toggleMenu && (
           <div className={styles.navMenuContainer}>
             <ul className={styles.navMenuContainerLinks}>
-              <li>
-                <a href="#about">About</a>
-              </li>
-
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-
-              <li>
-                <a href="#email">Email</a>
-              </li>
+              <li>About</li>
+              <li>Projects</li>
+              <li>Message Me</li>
             </ul>
           </div>
         )}
