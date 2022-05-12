@@ -1,0 +1,116 @@
+$small: 600px;
+$medium: 900px;
+
+.navbar {
+  width: 30rem;
+  align-self: flex-end;
+
+  .navLinks {
+    padding: 2rem 2rem;
+
+    .navLinksContainer {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        a {
+          color: var(--color-white-text);
+        }
+
+        &:nth-child(3) {
+          padding: 0.5rem 1rem;
+          background: var(--color-bg-email);
+          border-radius: 5px;
+        }
+      }
+
+      /* For Nav Links Container media Screen */
+      @media screen and (min-width: $small) {
+        display: flex;
+      }
+    }
+  }
+
+  .navMenu {
+    position: absolute;
+    top: 3%;
+    right: 8%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+
+    > span {
+      width: 2rem;
+      height: 2px;
+      background-color: var(--color-bg-email);
+      align-self: flex-start;
+      transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+      &:nth-of-type(1) {
+        width: 50%;
+      }
+
+      &:nth-of-type(2) {
+        width: 100%;
+      }
+
+      &:nth-of-type(3) {
+        width: 75%;
+      }
+    }
+
+    .activeTop {
+      transform-origin: bottom;
+      transform: rotatez(45deg) translate(3px, 0px);
+    }
+
+    .activeMid {
+      transform-origin: top;
+      transform: rotate(-45deg);
+    }
+
+    .activeBot {
+      transform-origin: bottom;
+      width: 50%;
+      transform: translate(6.5px, -4px) rotate(45deg);
+    }
+
+    .navMenuContainer {
+      .navMenuContainerLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        padding: 5.5rem;
+        transform: translateX(50%, 50%);
+
+        li {
+          margin: 0.5rem 1rem;
+          a {
+            color: var(--color-white-text);
+          }
+
+          &:nth-child(3) {
+            padding: 0.5rem 1rem;
+            background: var(--color-bg-email);
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    /* For Nav Menu media Screen */
+    @media screen and (min-width: $small) {
+      display: none;
+    }
+  }
+}

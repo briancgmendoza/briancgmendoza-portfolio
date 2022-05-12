@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
+:root {
+  --color-bg: #040c18;
+  --color-bg-email: #ff4820;
+  --color-blog: #042c54;
+  --color-white-text: #fff;
+  --color-text: #81afdd;
+  --color-subtext: #ff8a71;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
   outline: none;
   border: none;
   text-decoration: none;
@@ -11,7 +21,7 @@
 }
 
 body {
-  background-color: #020002;
+  background-color: var(--color-bg);
 }
 
 footer > div {
@@ -20,11 +30,11 @@ footer > div {
   bottom: 2%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: smaller;
-  color: #fff;
+  font-size: 0.5rem;
+  color: var(--color-text);
   text-align: center;
 
   > a {
-    color: #eee;
+    color: var(--color-text);
   }
 }
