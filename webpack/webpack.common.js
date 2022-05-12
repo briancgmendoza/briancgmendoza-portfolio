@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         include: [path.resolve(__dirname, "../src")],
         use: [
           {
@@ -26,6 +26,12 @@ module.exports = {
               modules: {
                 localIdentName: "[name]__[local]__[hash:base64:5]",
               },
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
             },
           },
         ],
