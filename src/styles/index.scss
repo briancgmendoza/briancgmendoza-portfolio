@@ -23,6 +23,12 @@
 body {
   background-color: var(--color-bg);
   overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Removing bootstrap's ul padding left by default */
+ul {
+  padding: 0 !important;
 }
 
 footer > div {

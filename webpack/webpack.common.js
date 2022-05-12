@@ -37,6 +37,15 @@ module.exports = {
         ],
       },
       {
+        test: /\.svg/,
+        use: {
+          loader: "svg-url-loader",
+          options: {
+            iesafe: true,
+          },
+        },
+      },
+      {
         test: /\.(js|jsx|ts|tsx)?$/,
         use: "ts-loader",
         exclude: /node_modules/,
