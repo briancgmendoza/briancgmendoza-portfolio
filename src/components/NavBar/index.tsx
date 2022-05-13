@@ -1,27 +1,16 @@
 import * as React from "react";
+
+import { navData } from "./nav-data";
 import styles from "../../styles/NavBar.module.scss";
 
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
-  const PRINT_ME = [
-    {
-      link: "#about",
-      name: "About",
-    },
-    {
-      link: "#projects",
-      name: "Projects",
-    },
-    {
-      link: "#messageMe",
-      name: "Message Me",
-    },
-  ];
+
   return (
     <section className={styles.navbar}>
       <div className={styles.navLinks}>
         <ul className={styles.navLinksContainer}>
-          {PRINT_ME.map((data, index) => {
+          {navData.map((data, index) => {
             return <li key={index}>{data.name}</li>;
           })}
         </ul>
@@ -38,7 +27,7 @@ const NavBar = () => {
         {toggleMenu && (
           <div className={styles.navMenuContainer}>
             <ul className={styles.navMenuContainerLinks}>
-              {PRINT_ME.map((data, index) => {
+              {navData.map((data, index) => {
                 return <li key={index}>{data.name}</li>;
               })}
             </ul>

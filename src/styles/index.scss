@@ -3,7 +3,7 @@
 :root {
   --color-bg: #040c18;
   --color-bg-email: #ff4820;
-  --color-blog: #042c54;
+  --color-about: #042c54;
   --color-white-text: #fff;
   --color-text: #81afdd;
   --color-subtext: #ff8a71;
@@ -22,7 +22,7 @@
 
 body {
   background-color: var(--color-bg);
-  overflow: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 

@@ -6,7 +6,7 @@ export const datas = [
   {
     src: `${startMyDay}`,
     caption: "How I start my day?",
-    paragraph: "You got it right! By having a coffee while reading messages",
+    paragraph: "You got it right! By having a coffee while reading messages.",
   },
   {
     src: `${doingDuringOff}`,
