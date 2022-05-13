@@ -59,19 +59,37 @@ const GitProfile = () => {
       <h2>My Git Profile</h2>
       <ul>
         <li>
-          Avatar: <img src={user.avatar_url} alt={user.login} />
+          <img src={user.avatar_url} alt={user.login} />
         </li>
-        <li>Git: {user.login}</li>
-        <li>Name: {user.name}</li>
-        <li>Bio: {user.bio}</li>
+        <li>
+          <span>Git Username: </span>
+          {user.login}
+        </li>
+        <li>
+          <span>Name: </span>
+          {user.name}
+        </li>
+        <li>
+          <span>Bio: </span>
+          {user.bio}
+        </li>
       </ul>
-      <ul>
+      <ul className={styles.reposContainer}>
         {repos.map((data: any, index: number) => {
           return (
             <li key={index}>
-              <h2>Repo Name: {data.name}</h2>
-              <p>Live Demo: {data.homepage}</p>
-              <p>Repo Link: {data.html_url}</p>
+              <h2>
+                <span>Repo Name: </span>
+                {data.name}
+              </h2>
+              <p>
+                <span>Live Demo: </span>
+                {data.homepage}
+              </p>
+              <p>
+                <span>Repo Link: </span>
+                {data.html_url}
+              </p>
             </li>
           );
         })}

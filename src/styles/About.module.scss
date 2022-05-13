@@ -6,8 +6,8 @@
   justify-content: center;
 
   > h1 {
-    color: var(--color-bg-email);
     font-size: 2rem;
+    color: var(--color-bg-email);
   }
 
   .name {
@@ -39,6 +39,53 @@
         color: var(--color-text);
         font-weight: bold;
       }
+    }
+  }
+}
+
+.workExp {
+  padding: 1rem 1rem 1rem 1.6rem;
+
+  > h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-bg-email);
+
+    > sup {
+      margin-left: 3rem;
+      font-size: 0.7rem;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--color-text);
+      }
+    }
+  }
+
+  .workExpContainer {
+    margin: 1rem;
+    color: var(--color-bg-email);
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    .company,
+    .position,
+    .started,
+    .until {
+      font-size: 1rem;
+      color: var(--color-white-text);
+      font-weight: 300;
+    }
+
+    span {
+      color: var(--color-text);
+      font-weight: bold;
+      margin-right: 0.5rem;
     }
   }
 }

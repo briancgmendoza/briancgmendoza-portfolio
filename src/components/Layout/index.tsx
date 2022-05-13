@@ -4,6 +4,8 @@ import NavBar from "../NavBar";
 import Carousel from "../Carousel";
 import About from "../About";
 import GitProfile from "../GitHub Profile/GitProfile";
+import Projects from "../Projects";
+import Email from "../Email";
 
 import styles from "../../styles/Layout.module.scss";
 
@@ -33,11 +35,13 @@ const Layout = () => {
           </div>
         </section>
       ) : (
-        <>
+        <section className={styles.colSplit}>
           <About />
           <GitProfile />
-        </>
+        </section>
       )}
+      <Projects />
+      <Email />
     </section>
   );
 };
