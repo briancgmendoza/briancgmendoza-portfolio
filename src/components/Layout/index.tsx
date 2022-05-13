@@ -27,6 +27,11 @@ const Layout = () => {
       <Carousel />
       {width >= 800 ? (
         <section className={styles.rowSplit}>
+          <div>
+            <p>
+              <i className={`${styles.arrow} ${styles.right}`}>Scrollable</i>
+            </p>
+          </div>
           <div className={styles.floatChild}>
             <About />
           </div>
