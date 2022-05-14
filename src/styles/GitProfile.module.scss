@@ -7,12 +7,12 @@
 
   text-align: center;
 
-  > h2 {
-    font-size: 2rem;
+  .title {
+    font-size: 2rem !important;
     color: var(--color-bg-email);
   }
 
-  > p {
+  .subTitle {
     color: var(--color-white-text);
   }
 
@@ -40,6 +40,10 @@
       font-size: 0.7rem;
       color: var(--color-white-text);
       margin-bottom: 1rem;
+
+      .repoName {
+        font-size: 0.7rem;
+      }
     }
   }
 }

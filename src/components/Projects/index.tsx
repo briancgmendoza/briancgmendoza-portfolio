@@ -11,11 +11,18 @@ const Projects = () => {
           return (
             <li key={index} className={styles.projectList}>
               <img src={data.src} alt={data.company} />
-              <h2>
+              <h2 className={styles.company}>
                 <span>Company: </span>
                 {data.company}
               </h2>
-
+              <p>
+                <span>Technology Used: </span>
+                {data.techUsed}
+              </p>
+              <p>
+                <span>Description: </span>
+                {data.description}
+              </p>
               <ul>
                 <p>
                   <span>Links: </span>
@@ -30,14 +37,6 @@ const Projects = () => {
                   })}
                 </p>
               </ul>
-              <p>
-                <span>Technology Used: </span>
-                {data.techUsed}
-              </p>
-              <p>
-                <span>Description: </span>
-                {data.description}
-              </p>
             </li>
           );
         })}

@@ -1,0 +1,14 @@
+$medium: 550px;
+
+.email {
+  width: 100%;
+  max-width: 550px;
+  padding: 2rem;
+  text-align: center;
+
+  > h2 {
+    font-size: 1.5rem !important;
+    color: var(--color-bg-email);
+    margin-bottom: 1rem !important;
+  }
+}

@@ -32,8 +32,12 @@ const NavBar = () => {
 
         {toggleMenu && (
           <div className={styles.navMenuContainer}>
-            <ul className={styles.navMenuContainerLinks}>
+            <ul
+              className={styles.navMenuContainerLinks}
+              onMouseLeave={() => setToggleMenu(!toggleMenu)}
+            >
               {navData.map((data, index) => {
+                const magicNumber = 2;
                 return (
                   <li key={index}>
                     <a href={data.link} className={styles.link}>
