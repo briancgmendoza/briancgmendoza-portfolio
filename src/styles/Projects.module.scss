@@ -53,13 +53,9 @@ $medium: 900px;
         font-size: 1rem;
       }
 
-      .links {
-        margin-left: 3rem;
-      }
-
       @media screen and (min-width: $medium) {
         width: 30%;
-        padding: 1rem 5rem;
+        padding: 1rem 2.8rem;
         margin: 0;
       }
     }

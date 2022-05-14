@@ -15,7 +15,14 @@ const Projects = () => {
                 <span>Company: </span>
                 {data.company}
               </h2>
-
+              <p>
+                <span>Technology Used: </span>
+                {data.techUsed}
+              </p>
+              <p>
+                <span>Description: </span>
+                {data.description}
+              </p>
               <ul>
                 <p>
                   <span>Links: </span>
@@ -30,14 +37,6 @@ const Projects = () => {
                   })}
                 </p>
               </ul>
-              <p>
-                <span>Technology Used: </span>
-                {data.techUsed}
-              </p>
-              <p>
-                <span>Description: </span>
-                {data.description}
-              </p>
             </li>
           );
         })}
