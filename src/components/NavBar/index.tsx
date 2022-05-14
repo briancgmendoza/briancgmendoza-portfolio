@@ -2,6 +2,8 @@ import * as React from "react";
 
 import { navData } from "./nav-data";
 import styles from "../../styles/NavBar.module.scss";
+import Modal from "../Modal";
+import Form from "../Form";
 
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
@@ -34,11 +36,23 @@ const NavBar = () => {
           <div className={styles.navMenuContainer}>
             <ul className={styles.navMenuContainerLinks}>
               {navData.map((data, index) => {
+                const magicNumber = 2;
                 return (
                   <li key={index}>
-                    <a href={data.link} className={styles.link}>
-                      {data.name}
-                    </a>
+                    {index !== magicNumber ? (
+                      <a href={data.link} className={styles.link}>
+                        {data.name}
+                      </a>
+                    ) : (
+                      <i
+                        className={styles.link}
+                        onClick={() => {
+                          console.log(data.name);
+                        }}
+                      >
+                        {data.name}
+                      </i>
+                    )}
                   </li>
                 );
               })}

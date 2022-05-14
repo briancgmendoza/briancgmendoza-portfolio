@@ -54,8 +54,8 @@ const GitProfile = () => {
 
   return (
     <section className={styles.gitProfile}>
-      <h2>My Git Profile</h2>
-      <p>(Personal Projects / Exams)</p>
+      <h2 className={styles.title}>My Git Profile</h2>
+      <p className={styles.subTitle}>(Personal Projects / Exams)</p>
       <ul>
         <li>
           <img src={user.avatar_url} alt={user.login} />
@@ -77,7 +77,7 @@ const GitProfile = () => {
         {repos.map((data: any, index: number) => {
           return (
             <li key={index}>
-              <h2>
+              <h2 className={styles.repoName}>
                 <span>Repo Name: </span>
                 {data.name}
               </h2>

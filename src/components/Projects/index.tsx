@@ -11,7 +11,7 @@ const Projects = () => {
           return (
             <li key={index} className={styles.projectList}>
               <img src={data.src} alt={data.company} />
-              <h2>
+              <h2 className={styles.company}>
                 <span>Company: </span>
                 {data.company}
               </h2>

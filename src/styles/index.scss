@@ -31,17 +31,6 @@ ul {
   padding: 0 !important;
 }
 
-footer > div {
-  position: fixed;
-  width: 16rem;
-  bottom: 2%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.5rem;
-  color: var(--color-text);
-  text-align: center;
-
-  > a {
-    color: var(--color-text);
-  }
+a {
+  text-decoration: none !important;
 }
