@@ -52,11 +52,10 @@ const GitProfile = () => {
     getRepos();
   }, []);
 
-  console.log(user);
-
   return (
     <section className={styles.gitProfile}>
       <h2>My Git Profile</h2>
+      <p>(Personal Projects / Exams)</p>
       <ul>
         <li>
           <img src={user.avatar_url} alt={user.login} />
@@ -84,11 +83,23 @@ const GitProfile = () => {
               </h2>
               <p>
                 <span>Live Demo: </span>
-                {data.homepage}
+                {data.homepage ? (
+                  <a href={data.homepage} target="_blank">
+                    {data.homepage}
+                  </a>
+                ) : (
+                  "No link available"
+                )}
               </p>
               <p>
                 <span>Repo Link: </span>
-                {data.html_url}
+                <a href={data.html_url} target="_blank">
+                  {data.html_url}
+                </a>
+              </p>
+              <p>
+                <span>Technologies Used: </span>
+                {data.description}
               </p>
             </li>
           );
