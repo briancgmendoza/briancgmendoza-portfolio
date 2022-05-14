@@ -3,7 +3,7 @@ import styles from "../../styles/Projects.module.scss";
 
 const Projects = () => {
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} id="projects">
       <h2>Projects</h2>
       <p>(Work Related)</p>
       <ul className={styles.projectsContainer}>
@@ -15,20 +15,21 @@ const Projects = () => {
                 <span>Company: </span>
                 {data.company}
               </h2>
-              <p>
-                <span>Links: </span>
-                <ul>
-                  {data.links.map((link: any) => {
+
+              <ul>
+                <p>
+                  <span>Links: </span>
+                  {data.links.map((link: any, index) => {
                     return (
-                      <li>
-                        <a href={link} target="_blank">
+                      <li key={index}>
+                        <a href={link} target="_blank" className={styles.links}>
                           {link.link}
                         </a>
                       </li>
                     );
                   })}
-                </ul>
-              </p>
+                </p>
+              </ul>
               <p>
                 <span>Technology Used: </span>
                 {data.techUsed}

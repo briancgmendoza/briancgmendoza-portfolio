@@ -17,10 +17,10 @@ $medium: 900px;
   }
 
   .projectsContainer {
-    margin-top: 1rem;
-
     @media screen and (min-width: $medium) {
       display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     img {
@@ -31,6 +31,11 @@ $medium: 900px;
       height: 100px;
       object-fit: contain;
       border-radius: 0.2rem;
+
+      @media screen and (min-width: $medium) {
+        position: unset;
+        transform: translateX(0);
+      }
     }
 
     .projectList {
@@ -44,8 +49,14 @@ $medium: 900px;
         font-weight: bold;
       }
 
-      > p > ul > li > a {
+      .links {
         margin-left: 3rem;
+      }
+
+      @media screen and (min-width: $medium) {
+        width: 30%;
+        padding: 1rem 5rem;
+        margin: 0;
       }
     }
   }
