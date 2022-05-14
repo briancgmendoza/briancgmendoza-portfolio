@@ -7,6 +7,9 @@ export const workData = [
     company: "Capslock Inc",
     links: [
       {
+        link: "www.ob.com",
+      },
+      {
         link: "www.kok.com",
       },
       {
@@ -23,6 +26,9 @@ export const workData = [
       },
       {
         link: "www.huohu.com",
+      },
+      {
+        link: "www.fh.com",
       },
     ],
     techUsed:

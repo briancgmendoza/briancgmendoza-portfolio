@@ -11,7 +11,13 @@ const NavBar = () => {
       <div className={styles.navLinks}>
         <ul className={styles.navLinksContainer}>
           {navData.map((data, index) => {
-            return <li key={index}>{data.name}</li>;
+            return (
+              <li key={index}>
+                <a href={data.link} className={styles.link}>
+                  {data.name}
+                </a>
+              </li>
+            );
           })}
         </ul>
       </div>
@@ -28,7 +34,13 @@ const NavBar = () => {
           <div className={styles.navMenuContainer}>
             <ul className={styles.navMenuContainerLinks}>
               {navData.map((data, index) => {
-                return <li key={index}>{data.name}</li>;
+                return (
+                  <li key={index}>
+                    <a href={data.link} className={styles.link}>
+                      {data.name}
+                    </a>
+                  </li>
+                );
               })}
             </ul>
           </div>

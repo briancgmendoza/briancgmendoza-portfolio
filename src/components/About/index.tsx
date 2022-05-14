@@ -5,11 +5,11 @@ import styles from "../../styles/About.module.scss";
 const About = () => {
   return (
     <>
-      <section className={styles.about}>
+      <section className={styles.about} id="about">
         <h1>About Me</h1>
-        {aboutData.map((data) => {
+        {aboutData.map((data, index) => {
           return (
-            <>
+            <div key={index}>
               <h3 className={styles.name}>{data.name}</h3>
               <p className={styles.work}>{data.work}</p>
               <ul className={styles.skillsContainer}>
@@ -23,14 +23,14 @@ const About = () => {
                   );
                 })}
               </ul>
-            </>
+            </div>
           );
         })}
       </section>
 
       <section className={styles.workExp}>
         <h1>
-          My Work Experience{" "}
+          My Work Experience
           <sup>
             <a
               className="btnDownloadResume"
@@ -42,9 +42,9 @@ const About = () => {
           </sup>
         </h1>
         <ul className={styles.workExpContainer}>
-          {workExp.map((data) => {
+          {workExp.map((data, index) => {
             return (
-              <li>
+              <li key={index}>
                 <h3 className={styles.company}>
                   <span>Company: </span>
                   {data.company}
