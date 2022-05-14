@@ -34,8 +34,12 @@ const About = () => {
           <sup>
             <a
               className="btnDownloadResume"
-              // href="../assets/Resume/ResumeOfficial.pdf"
-              // download="ResumeOfficial.pdf"
+              href="/src/sample.text"
+              target="_blank"
+              download
+              onClick={() => {
+                alert("Work in Progress! Download isn't yet available");
+              }}
             >
               Download Resume
             </a>
