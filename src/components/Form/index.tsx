@@ -1,4 +1,5 @@
 import * as React from "react";
+import emailjs from "@emailjs/browser";
 
 import styles from "../../styles/Form.module.scss";
 type Props = {
@@ -12,6 +13,7 @@ type Message = {
 };
 
 const Form = ({ onClose }: Props) => {
+  const form = React.useRef();
   const [sendMessage, setSendMessage] = React.useState<Message[]>([
     {
       sender: "",
@@ -25,7 +27,6 @@ const Form = ({ onClose }: Props) => {
     e: React.SyntheticEvent<HTMLInputElement>
   ) => {
     let data: Message[] = [...sendMessage];
-    // data[index][e.currentTarget.name] = e.currentTarget.value;
     if (e.currentTarget.name === "sender") {
       data[index].sender = e.currentTarget.value;
     } else if (e.currentTarget.name === "emailAddress") {
@@ -38,7 +39,23 @@ const Form = ({ onClose }: Props) => {
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(sendMessage);
+
+    emailjs
+      .sendForm(
+        "service_1e779tc",
+        "template_o1sojn6",
+        form.current,
+        "zkHjTBD5q4_b82pBr"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
     alert("Message sent!");
   };
 
@@ -91,7 +108,7 @@ const Form = ({ onClose }: Props) => {
   };
 
   return (
-    <form onSubmit={(values) => onSubmitHandler(values)}>
+    <form ref={form} onSubmit={(values) => onSubmitHandler(values)}>
       {renderForm()}
       <div className={styles.btnContainer}>
         <button type="submit" className={styles.btnSubmit}>
