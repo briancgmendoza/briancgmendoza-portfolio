@@ -6,6 +6,12 @@ import styles from "../../styles/NavBar.module.scss";
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
+  React.useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setToggleMenu(false);
+    });
+  }, []);
+
   return (
     <section className={styles.navbar}>
       <div className={styles.navLinks}>
@@ -32,10 +38,7 @@ const NavBar = () => {
 
         {toggleMenu && (
           <div className={styles.navMenuContainer}>
-            <ul
-              className={styles.navMenuContainerLinks}
-              onMouseLeave={() => setToggleMenu(!toggleMenu)}
-            >
+            <ul className={styles.navMenuContainerLinks}>
               {navData.map((data, index) => {
                 const magicNumber = 2;
                 return (

@@ -20,8 +20,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-bg);
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }

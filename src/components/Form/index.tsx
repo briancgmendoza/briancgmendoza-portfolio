@@ -57,50 +57,62 @@ const Form = ({ onClose }: Props) => {
       );
 
     alert("Message sent!");
+
+    setSendMessage([
+      {
+        sender: "",
+        emailAddress: "",
+        message: "",
+      },
+    ]);
   };
 
   const renderForm = () => {
     return sendMessage.map((input, index) => {
       return (
         <div key={index}>
-          <div className="form-floating mb-3">
+          <div className={styles.formGroup}>
             <input
               type="text"
               value={input.sender}
               onChange={(e) => handleFormChange(index, e)}
               name="sender"
               required
-              className="form-control"
-              placeholder=""
+              className={styles.formControl}
+              placeholder="Your Name"
             />
-            <label htmlFor="sender">Your Name</label>
+            <label htmlFor="sender" className={styles.formLabel}>
+              Your Name
+            </label>
           </div>
 
-          <div className="form-floating mb-3">
+          <div className={styles.formGroup}>
             <input
               type="email"
               value={input.emailAddress}
               onChange={(e) => handleFormChange(index, e)}
               name="emailAddress"
-              className="form-control"
-              placeholder=""
+              className={styles.formControl}
+              placeholder="Your Email address (Optional)"
             />
-            <label htmlFor={input.emailAddress}>
-              Your Email address(Optional)
+            <label htmlFor="emailAddress" className={styles.formLabel}>
+              Your Email address (Optional)
             </label>
           </div>
 
-          <div className="form-floating mb-3">
+          <div className={styles.formGroup}>
             <input
               type="text"
               value={input.message}
               onChange={(e) => handleFormChange(index, e)}
               name="message"
               required
-              className="form-control"
-              placeholder=""
+              className={styles.formControl}
+              placeholder="Message"
             />
-            <label htmlFor={input.message}>Message</label>
+            <label htmlFor="message" className={styles.formLabel}>
+              Message
+            </label>
           </div>
         </div>
       );
