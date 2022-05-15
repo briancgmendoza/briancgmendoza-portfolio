@@ -1,3 +1,55 @@
+.formGroup {
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+
+  &:focus-within {
+    transform: scale(1.05);
+  }
+
+  .formControl {
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.02);
+    width: 100%;
+    color: var(--color-text);
+    border-radius: 5px;
+    border-color: #ccc;
+    border-style: none none solid none;
+    z-index: 2;
+    transition: all 0.5s;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus {
+      border-color: var(--color-bg-email);
+    }
+
+    &:focus + .formLabel,
+    &:not(:placeholder-shown) + .formLabel {
+      transform: translateY(-4rem) scale(0.8);
+    }
+  }
+
+  .formLabel {
+    padding-left: 0.5rem;
+    display: inline-block;
+    font-size: 1rem;
+    color: #aaa;
+    opacity: 1;
+    transform: translateY(-2rem);
+    transform-origin: 0 0;
+    transition: all 0.3s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
 .btnContainer {
   display: flex;
   align-items: center;
