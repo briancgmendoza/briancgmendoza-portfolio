@@ -31,7 +31,7 @@ const About = () => {
       <section className={styles.workExp}>
         <h1>
           My Work Experience
-          <sup>
+          {/* <sup>
             <a
               className="btnDownloadResume"
               href="/src/sample.text"
@@ -43,7 +43,7 @@ const About = () => {
             >
               Download Resume
             </a>
-          </sup>
+          </sup> */}
         </h1>
         <ul className={styles.workExpContainer}>
           {workExp.map((data, index) => {

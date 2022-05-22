@@ -1,6 +1,6 @@
 export const workExp = [
   {
-    company: "Caplocks Inc (DSSE)",
+    company: "Innovations Group (Capslock Inc)",
     position: "ReactJS Developer",
     dateStarted: "December 2021",
     until: "May 2022",

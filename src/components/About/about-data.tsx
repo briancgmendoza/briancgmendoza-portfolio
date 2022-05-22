@@ -22,7 +22,7 @@ export const aboutData = [
       },
       {
         span: "Tools: ",
-        skills: "Jira, Confluence, Figma, Zeplin & PostMan.",
+        skills: "Jira, Confluence, Figma, Zeplin, PostMan & Git.",
       },
     ],
   },
