@@ -31,4 +31,8 @@ body {
 
 a {
   color: var(--color-white-text);
+
+  &:hover {
+    color: var(--color-subtext);
+  }
 }

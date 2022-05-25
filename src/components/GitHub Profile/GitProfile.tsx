@@ -76,32 +76,34 @@ const GitProfile = () => {
       <ul className={styles.reposContainer}>
         {repos.map((data: any, index: number) => {
           return (
-            <li key={index}>
-              <h2 className={styles.repoName}>
-                <span>Repo Name: </span>
-                {data.name}
-              </h2>
-              <p>
-                <span>Live Demo: </span>
-                {data.homepage ? (
-                  <a href={data.homepage} target="_blank">
-                    {data.homepage}
+            data.name !== "briancgmendoza" && (
+              <li key={index}>
+                <h2 className={styles.repoName}>
+                  <span>Repo Name: </span>
+                  {data.name}
+                </h2>
+                <p>
+                  <span>Live Demo: </span>
+                  {data.homepage ? (
+                    <a href={data.homepage} target="_blank">
+                      {data.homepage}
+                    </a>
+                  ) : (
+                    "No link available"
+                  )}
+                </p>
+                <p>
+                  <span>Repo Link: </span>
+                  <a href={data.html_url} target="_blank">
+                    {data.html_url}
                   </a>
-                ) : (
-                  "No link available"
-                )}
-              </p>
-              <p>
-                <span>Repo Link: </span>
-                <a href={data.html_url} target="_blank">
-                  {data.html_url}
-                </a>
-              </p>
-              <p>
-                <span>Technologies Used: </span>
-                {data.description}
-              </p>
-            </li>
+                </p>
+                <p>
+                  <span>Technologies Used: </span>
+                  {data.description}
+                </p>
+              </li>
+            )
           );
         })}
       </ul>
