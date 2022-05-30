@@ -29,7 +29,12 @@ const Projects = () => {
                   {data.links.map((link: any, index) => {
                     return (
                       <li key={index}>
-                        <a href={link} target="_blank" className={styles.links}>
+                        <a
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          href={link.link}
+                          className={styles.links}
+                        >
                           {link.link}
                         </a>
                       </li>

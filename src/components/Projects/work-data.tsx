@@ -7,13 +7,13 @@ export const workData = [
     company: "Capslock Inc",
     links: [
       {
-        link: "www.ob.com",
+        link: "https://www.ob.com",
       },
       {
-        link: "www.kok.com",
+        link: "https://www.kok.com",
       },
       {
-        link: "www.huohu.com",
+        link: "https://www.huohu.com",
       },
     ],
     techUsed:

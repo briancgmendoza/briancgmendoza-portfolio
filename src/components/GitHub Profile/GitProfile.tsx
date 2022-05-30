@@ -85,7 +85,11 @@ const GitProfile = () => {
                 <p>
                   <span>Live Demo: </span>
                   {data.homepage ? (
-                    <a href={data.homepage} target="_blank">
+                    <a
+                      href={data.homepage}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {data.homepage}
                     </a>
                   ) : (
@@ -94,7 +98,11 @@ const GitProfile = () => {
                 </p>
                 <p>
                   <span>Repo Link: </span>
-                  <a href={data.html_url} target="_blank">
+                  <a
+                    href={data.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {data.html_url}
                   </a>
                 </p>
